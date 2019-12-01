@@ -3,11 +3,8 @@ package cn.cjxnsb;
 import cn.cjxnsb.annotation.MyField;
 import cn.cjxnsb.annotation.Table;
 import cn.cjxnsb.entity.User;
-import cn.cjxnsb.options.TableOptions;
-import cn.cjxnsb.options.impl.CreateTableImpl;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -85,7 +82,7 @@ public class Demo {
     }
 
     @Test
-    void t3() throws SQLException {
+    public void t3() throws SQLException {
         User user = new User();
         user.createTable();
     }
@@ -94,7 +91,7 @@ public class Demo {
 
 
     @Test
-    void t4() throws NoSuchFieldException {
+    public void t4() throws NoSuchFieldException {
         Class<User> aClass = User.class;
         Field name = aClass.getDeclaredField("name");
         String simpleName = name.getType().getSimpleName();
@@ -102,7 +99,7 @@ public class Demo {
     }
 
     @Test
-    void t5(){
+    public void t5(){
     }
 
 }

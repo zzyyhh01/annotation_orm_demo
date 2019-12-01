@@ -5,7 +5,7 @@ import cn.cjxnsb.entity.BaseEntity;
 
 import java.sql.SQLException;
 
-public interface TableOptions extends CreateTable {
+public interface TableOptions {
 
 
 

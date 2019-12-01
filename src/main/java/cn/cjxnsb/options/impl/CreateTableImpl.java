@@ -31,7 +31,7 @@ public class CreateTableImpl implements CreateTable {
      * @return 字段信息列表
      */
     private List<Column> getColumns(Class<? extends BaseEntity> clazz){
-        List<Column> columns = new ArrayList<>();
+        List<Column> columns = new ArrayList<Column>();
         Field[] fields = clazz.getDeclaredFields();
         String columnName;
         String typeName;

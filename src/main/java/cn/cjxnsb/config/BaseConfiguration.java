@@ -17,7 +17,7 @@ public abstract class BaseConfiguration {
      */
     @Deprecated
     public static Map<String, DataType> defaultDataTypes(){
-        Map<String,DataType> dataTypeMap = new HashMap<>();
+        Map<String,DataType> dataTypeMap = new HashMap<String, DataType>();
         dataTypeMap.put("String",new DataType("VARCHAR",255));
 
         DataType integer = new DataType("INTEGER", 11);
@@ -37,10 +37,10 @@ public abstract class BaseConfiguration {
 
     /**
      * 默认类型转换
-     * @return 默认类型转换map
+     * @return 默认类型转换集合
      */
     public static Map<String,String> defaultTypeConversion(){
-        Map<String,String> defaultTypeConversionMap = new HashMap<>();
+        Map<String,String> defaultTypeConversionMap = new HashMap<String, String>();
 
         defaultTypeConversionMap.put("String","VARCHAR");
 
@@ -56,8 +56,12 @@ public abstract class BaseConfiguration {
         return defaultTypeConversionMap;
     }
 
+    /**
+     * 指定默认类型的长度
+     * @return 默认类型长度集合
+     */
     public static Map<String,Integer> defaultTypeLength(){
-        Map<String,Integer> defaultTypeLength = new HashMap<>();
+        Map<String,Integer> defaultTypeLength = new HashMap<String, Integer>();
 
         defaultTypeLength.put("VARCHAR",255);
 
